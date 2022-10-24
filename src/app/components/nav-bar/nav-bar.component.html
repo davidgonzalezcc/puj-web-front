@@ -1,0 +1,41 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <form class="d-flex input-group w-auto">
+            <input
+                type="search"
+                type="search"
+                class="form-control rounded"
+                placeholder="Busca libro/editorial"
+                aria-label="Search"
+            />
+        </form>
+        <a class="navbar-brand" routerLink=""><h1>LIBRERÍA</h1></a>
+        <a class="btn btn-primary" routerLink="/login" role="button" [hidden]="loginBt" >Iniciar Sesión</a>
+        <a class="btn btn-primary" role="button" [hidden]="logOutBt" routerLink="" >Cerrar Sesión</a>
+        <button class="navbar-toggler collapsed" type="button" (click)="toggleState()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse" [ngClass]="{ 'collapse': isCollapse }">
+            <ul class="navbar-nav mr-auto">
+                <li routerLinkActive="active" class="nav-item">
+                    <ul class="navbar-nav mr-auto">
+                        <li><h4>GESTION DE LIBROS</h4></li>
+                        <li routerLinkActive="active" class="nav-item"><a class="nav-link" routerLink="/add-book">Agregar Libro</a></li>
+                        <li routerLinkActive="active" class="nav-item"><a class="nav-link" routerLink="/modify-book">Modificar Libro</a></li>
+                        <li routerLinkActive="active" class="nav-item"><a class="nav-link" routerLink="/delete-book">Eliminar Libro</a></li>
+                    </ul>
+                </li>
+                <li routerLinkActive="active" class="nav-item">
+                    <ul class="navbar-nav mr-auto">
+                        <li><h4>GESTION DE USUARIOS</h4></li>
+                        <li routerLinkActive="active" class="nav-item"><a class="nav-link" routerLink="users/add-user">Agregar Usuario</a></li>
+                        <li routerLinkActive="active" class="nav-item"><a class="nav-link" routerLink="users/modify-user">Modificar Usuario</a></li>
+                        <li routerLinkActive="active" class="nav-item"><a class="nav-link" routerLink="users/delete-user">Eliminar Usuario</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+  </nav>
