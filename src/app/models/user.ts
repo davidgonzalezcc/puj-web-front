@@ -4,5 +4,5 @@ export interface User{
   lastname: String;
   birthday: Date;
   role: String;
-  activar:boolean;
+  activate:boolean;
 }
